@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUPA – Tienda de Maquillaje</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-logo">LUPA</div>
+    <nav class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotras">Nosotras</a>
+    </nav>
+    <button class="cart-btn" id="cartToggle">
+      <i class="fas fa-shopping-bag"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="hero-sub">Nueva Colección 2025</p>
+      <h1 class="hero-title">El maquillaje<br /><em>es tu lupa</em></h1>
+      <p class="hero-desc">Descubre productos de alta calidad que revelan tu mejor versión. Desde bases hasta labiales, todo lo que necesitas en un solo lugar.</p>
+      <a href="#productos" class="btn-primary">Explorar Colección</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-circle"></div>
+      <div class="hero-ring"></div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS + PRODUCTOS -->
+  <section class="menu-section" id="productos">
+    <div class="section-header">
+      <p class="section-tag">Nuestra</p>
+      <h2 class="section-title">Colección</h2>
+    </div>
+    <p class="section-sub">Cada producto, una revelación</p>
+
+    <!-- CATEGORÍAS -->
+    <div class="cat-grid" id="categorias">
+      <div class="cat-card active" data-cat="todos"><span class="cat-icon"><i class="fas fa-star"></i></span><span>Todos</span></div>
+      <div class="cat-card" data-cat="labios"><span class="cat-icon"><i class="fas fa-kiss-wink-heart"></i></span><span>Labios</span></div>
+      <div class="cat-card" data-cat="ojos"><span class="cat-icon"><i class="fas fa-eye"></i></span><span>Ojos</span></div>
+      <div class="cat-card" data-cat="rostro"><span class="cat-icon"><i class="fas fa-circle-user"></i></span><span>Rostro</span></div>
+      <div class="cat-card" data-cat="colorete"><span class="cat-icon"><i class="fas fa-palette"></i></span><span>Colorete</span></div>
+      <div class="cat-card" data-cat="cejas"><span class="cat-icon"><i class="fas fa-pen-nib"></i></span><span>Cejas</span></div>
+      <div class="cat-card" data-cat="sets"><span class="cat-icon"><i class="fas fa-box-open"></i></span><span>Sets</span></div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div class="products-grid" id="productsGrid">
+
+      <!-- LABIOS -->
+      <div class="product-card" data-cat="labios">
+        <img src="img/labial-mate.png" alt="Labial Mate Sedoso" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge labios-b">Labios</div>
+          <h3>Labial Mate Sedoso</h3>
+          <p>Acabado mate de larga duración, fórmula hidratante</p>
+          <div class="product-footer">
+            <span class="product-price">$28.000</span>
+            <button class="add-btn" data-name="Labial Mate Sedoso" data-price="28000" data-icon="💄">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="labios">
+        <img src="img/gloss.png" alt="Gloss Voluminizador" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge labios-b">Labios</div>
+          <h3>Gloss Voluminizador</h3>
+          <p>Efecto volumen con brillo cristalino y fragancia de fresa</p>
+          <div class="product-footer">
+            <span class="product-price">$22.000</span>
+            <button class="add-btn" data-name="Gloss Voluminizador" data-price="22000" data-icon="💋">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="labios">
+        <img src="img/tinta-labios.png" alt="Tinta de Labios" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge labios-b">Labios</div>
+          <h3>Tinta de Labios</h3>
+          <p>Color intenso que dura hasta 12 horas sin retoques</p>
+          <div class="product-footer">
+            <span class="product-price">$32.000</span>
+            <button class="add-btn" data-name="Tinta de Labios" data-price="32000" data-icon="💄">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- OJOS -->
+      <div class="product-card" data-cat="ojos">
+        <img src="img/mascara.png" alt="Máscara Volumizante" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge ojos-b">Ojos</div>
+          <h3>Máscara Volumizante</h3>
+          <p>Alarga, curva y da volumen extremo sin grumos</p>
+          <div class="product-footer">
+            <span class="product-price">$35.000</span>
+            <button class="add-btn" data-name="Máscara Volumizante" data-price="35000" data-icon="👁️">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="ojos">
+        <img src="img/paleta-ahumados.png" alt="Paleta Ahumados" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge ojos-b">Ojos</div>
+          <h3>Paleta Ahumados</h3>
+          <p>12 sombras con acabados mate y metálico para todo tipo de look</p>
+          <div class="product-footer">
+            <span class="product-price">$65.000</span>
+            <button class="add-btn" data-name="Paleta Ahumados" data-price="65000" data-icon="🎨">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="ojos">
+        <img src="img/delineador.png" alt="Delineador Líquido" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge ojos-b">Ojos</div>
+          <h3>Delineador Líquido</h3>
+          <p>Punta ultrafina para trazos precisos y resistente al agua</p>
+          <div class="product-footer">
+            <span class="product-price">$25.000</span>
+            <button class="add-btn" data-name="Delineador Líquido" data-price="25000" data-icon="✏️">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROSTRO -->
+      <div class="product-card" data-cat="rostro">
+        <img src="img/base.png" alt="Base de Cobertura Total" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge rostro-b">Rostro</div>
+          <h3>Base de Cobertura Total</h3>
+          <p>Formulada con SPF 30, cubre imperfecciones con acabado natural</p>
+          <div class="product-footer">
+            <span class="product-price">$72.000</span>
+            <button class="add-btn" data-name="Base de Cobertura Total" data-price="72000" data-icon="🧴">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="rostro">
+        <img src="img/corrector.png" alt="Corrector Iluminador" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge rostro-b">Rostro</div>
+          <h3>Corrector Iluminador</h3>
+          <p>Elimina ojeras y unifica el tono con acabado luminoso</p>
+          <div class="product-footer">
+            <span class="product-price">$38.000</span>
+            <button class="add-btn" data-name="Corrector Iluminador" data-price="38000" data-icon="✨">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="rostro">
+        <img src="img/polvo-fijador.png" alt="Polvo Fijador HD" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge rostro-b">Rostro</div>
+          <h3>Polvo Fijador HD</h3>
+          <p>Fija el maquillaje hasta 16 horas con acabado sedoso</p>
+          <div class="product-footer">
+            <span class="product-price">$45.000</span>
+            <button class="add-btn" data-name="Polvo Fijador HD" data-price="45000" data-icon="🌸">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLORETE -->
+      <div class="product-card" data-cat="colorete">
+        <img src="img/rubor.png" alt="Rubor Satinado Rose" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge colorete-b">Colorete</div>
+          <h3>Rubor Satinado Rose</h3>
+          <p>Tono rosa cálido con acabado acetinado de larga duración</p>
+          <div class="product-footer">
+            <span class="product-price">$42.000</span>
+            <button class="add-btn" data-name="Rubor Satinado Rose" data-price="42000" data-icon="🌹">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="colorete">
+        <img src="img/iluminador.png" alt="Iluminador en Polvo" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge colorete-b">Colorete</div>
+          <h3>Iluminador en Polvo</h3>
+          <p>Destellos dorados para pómulos y puntos de luz</p>
+          <div class="product-footer">
+            <span class="product-price">$48.000</span>
+            <button class="add-btn" data-name="Iluminador en Polvo" data-price="48000" data-icon="⭐">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEJAS -->
+      <div class="product-card" data-cat="cejas">
+        <img src="img/lapiz-cejas.png" alt="Lápiz de Cejas Micro" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge cejas-b">Cejas</div>
+          <h3>Lápiz de Cejas Micro</h3>
+          <p>Punta micrométrica para imitar cada pelo con naturalidad</p>
+          <div class="product-footer">
+            <span class="product-price">$30.000</span>
+            <button class="add-btn" data-name="Lápiz de Cejas Micro" data-price="30000" data-icon="✏️">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="cejas">
+        <img src="img/gel-cejas.png" alt="Gel Fijador de Cejas" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge cejas-b">Cejas</div>
+          <h3>Gel Fijador de Cejas</h3>
+          <p>Fija y define el arco perfectamente durante todo el día</p>
+          <div class="product-footer">
+            <span class="product-price">$26.000</span>
+            <button class="add-btn" data-name="Gel Fijador de Cejas" data-price="26000" data-icon="🖊️">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETS -->
+      <div class="product-card" data-cat="sets">
+        <img src="img/set-labios-ojos.png" alt="Set Labios & Ojos" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sets-b">Set</div>
+          <h3>Set Labios & Ojos</h3>
+          <p>Labial + gloss + máscara + delineador en estuche de lujo</p>
+          <div class="product-footer">
+            <span class="product-price">$98.000</span>
+            <button class="add-btn" data-name="Set Labios & Ojos" data-price="98000" data-icon="🎁">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="sets">
+        <img src="img/kit-completo.png" alt="Kit Completo LUPA" class="product-img" />
+        <div class="product-info">
+          <div class="product-badge sets-b">Set</div>
+          <h3>Kit Completo LUPA</h3>
+          <p>Base, corrector, rubor, sombras y labial en una sola caja</p>
+          <div class="product-footer">
+            <span class="product-price">$185.000</span>
+            <button class="add-btn" data-name="Kit Completo LUPA" data-price="185000" data-icon="💝">+ Añadir</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NOSOTRAS -->
+  <section class="nosotras-section" id="nosotras">
+    <div class="nosotras-inner">
+      <div class="nosotras-text">
+        <p class="section-tag">Quiénes somos</p>
+        <h2 class="section-title">La visión detrás de <em>LUPA</em></h2>
+        <p>En LUPA creemos que el maquillaje no oculta, <strong>revela</strong>. Cada producto está pensado para ampliar tu belleza natural y darte la confianza de ser tú misma, con mayor intensidad.</p>
+        <p>Seleccionamos marcas y fórmulas que cuidan tu piel mientras celebran tu arte personal.</p>
+        <div class="stats">
+          <div class="stat"><span>6+</span><p>Categorías</p></div>
+          <div class="stat"><span>100%</span><p>Calidad</p></div>
+          <div class="stat"><span>∞</span><p>Looks</p></div>
+        </div>
+      </div>
+      <div class="nosotras-deco">
+        <div class="deco-oval"></div>
+        <div class="deco-text">BELLEZA · ARTE · CONFIANZA · LUPA ·</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">LUPA</div>
+    <p class="footer-tagline">Amplía tu belleza</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">Contacto</a>
+    </div>
+    <p class="footer-copy">© 2025 LUPA. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CARRITO LATERAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>💄 Tu Bolsa</h2>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <span>🛍️</span>
+        <p>Tu bolsa está vacía</p>
+        <small>¡Agrega algo hermoso!</small>
+      </div>
+    </div>
+    <div class="cart-summary" id="cartSummary" style="display:none">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="btn-checkout">Finalizar Compra 💄</button>
+      <button class="btn-clear">Vaciar bolsa</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
